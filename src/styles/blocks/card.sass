@@ -1,5 +1,7 @@
 .card
-  box-shadow: 0 0 5px #ccc
+  box-shadow: 2rem 2rem 8rem rgba(78, 134, 165, 0.09), 1rem 1rem 4rem rgba(78, 134, 165, 0.09), inset 4rem 4rem 10rem rgba(78, 134, 165, 0.05)
+  border-radius: 20px
+  overflow: hidden
 
 .card__image
   display: block
@@ -20,19 +22,8 @@
     left: 0
     width: 100%
     height: 100%
-    background-color: rgba(white, 0.7)
+    background-color: rgba(white, 0.3)
 
-  &:after
-    width: 80px
-    height: 80px
-    background: url('https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-magnifying-glass.svg')
-    background-position: 50% 50%
-    background-repeat: no-repeat
-    background-size: contain
-    top: 50%
-    left: 50%
-    margin-left: -40px
-    margin-top: -40px
 
   &:hover
     &:before
@@ -42,8 +33,8 @@
       opacity: .5
 
 .card__caption
-  background-color: white
-  padding: 20px;
+    padding: 20px 40px 10px
+    background: #F7FBFD
 
 .card__title
   margin-bottom: 10px
@@ -54,9 +45,6 @@
     font-weight: bold
     font-size: 16px
     color: $dark-body-color
-
-    &:hover
-      border-bottom: dotted 1px #9055a2
 
 .card__description
   color: $light-body-color
