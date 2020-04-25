@@ -51,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
           />
           <div className="container__sidebar">
             <div className="sidebar">
-              <img class="main-image" src="https://pbs.twimg.com/profile_images/1112504074459480064/2ylym9Ff_400x400.jpg" alt=""/>
+              <img className="main-image" src="https://pbs.twimg.com/profile_images/1112504074459480064/2ylym9Ff_400x400.jpg" alt=""/>
                 <h6 className="sidebar__title name">
                   <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
                 </h6>
