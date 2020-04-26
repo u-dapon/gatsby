@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
         <title>udapon.tokyo</title>
       </Helmet>
 
-      {data.allDatoCmsWork.edges.map(({ node: work }) => (
+      {data.allDatoCmsWork.edges.reverse().map(({ node: work }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
             <Link to={`/works/${work.slug}`} className="card__image">

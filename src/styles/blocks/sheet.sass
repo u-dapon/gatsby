@@ -17,12 +17,22 @@
   line-height: 1
 
 .sheet__lead
-  font-size: 16px
+  font-size: 14px
   margin-bottom: 30px
+  color: $light-body-color
+  text-align: center
 
 .sheet__gallery,
 .sheet__slider
   margin-bottom: 30px
+
+
+.sheet__gallery
+    max-width: 260px
+    margin: 0 auto 30px
+
+    img
+      border-radius: 10px
 
 .sheet__body
   color: $light-body-color
@@ -64,6 +74,104 @@
     font-size: 1.1em
     padding: 20px
 
+
+.c-button
+    display: -webkit-inline-box
+    display: inline-flex
+    height: 90px
+    width: 90px
+    padding: 0
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    flex-direction: column
+    -webkit-box-align: center
+    align-items: center
+    -webkit-box-pack: center
+    justify-content: center
+    border-radius: 16px
+    border: 0
+    color: #879fbe
+    background: transparent
+    position: relative
+    box-shadow: 0.8rem 0.8rem 2.4rem #c1d3ea, -0.8rem -0.8rem 2.4rem white, -0.2rem -0.2rem 0.2rem white
+    -webkit-transition: all 120ms ease-out 0s
+    transition: all 120ms ease-out 0s
+    cursor: pointer
+
+    &:after
+      content: ''
+      position: absolute
+      border-radius: 16px
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      -webkit-transition: all 120ms ease-out 0s
+      transition: all 120ms ease-out 0s
+
+    &:before
+      content: ''
+      position: absolute
+      border-radius: 16px
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      border: 2px solid transparent
+      -webkit-filter: blur(2px)
+      filter: blur(2px)
+      -webkit-transition: all 120ms ease-out 0s
+      transition: all 120ms ease-out 0s
+
+.c-button--active:after
+    box-shadow: inset 0px 0px 1.6rem white
+
+.c-button--active:before
+    border-color: white
+    box-shadow: 0px 0.4rem 1.6rem white
+
+
+.c-button--active
+    background: linear-gradient(to top, #d4e0f1, #fafcfd)
+    box-shadow: inset 0.2rem 0.2rem 0.8rem #87aad7, inset 0.8rem 0.8rem 1.6rem #c4d4e4, inset -0.4rem -0.4rem 0.8rem white, 2px 2px 8px #9bb8de, -2px -2px 2px rgba(255, 255, 255, 0.7)
+
+.c-button-svg
+    -webkit-filter: grayscale(40%) brightness(110%)
+    filter: grayscale(40%) brightness(110%)
+    -webkit-transition: all 120ms ease-out 0s
+    transition: all 120ms ease-out 0s
+
+.c-button-label
+    -webkit-filter: grayscale(40%) brightness(110%)
+    filter: grayscale(40%) brightness(110%)
+    -webkit-transition: all 120ms ease-out 0s
+    transition: all 120ms ease-out 0s
+
+.c-button:focus
+    outline: 0
+
+.sheet__reaction
+    marginBottom: 30px
+
+p.like
+    opacity: 0
+    position: absolute
+    color: #9eaec2
+    margin-top: -30px
+    margin-left: 8px
+    z-index: 1000
+    transition: all 120ms
+p.liked
+    opacity: 1
+
+.slick-track img
+    border-radius: 26px
+
+.sheet__body a
+    color: #0e2a4a
+.sheet__body a:visited
+    color: #0e2a4a
+
 @media screen and (min-width: 900px)
   .sheet
     padding: 60px 60px 40px
@@ -75,7 +183,7 @@
     font-size: 48px
 
   .sheet__lead
-    font-size: 20px
+    font-size: 16px
 
   .sheet__body
     font-size: 16px

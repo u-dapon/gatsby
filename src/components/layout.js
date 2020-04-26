@@ -97,6 +97,34 @@ const TemplateWrapper = ({ children }) => {
               </div>
             </div>
             {children}
+
+            <div className="author_info">
+              <img className="main-image" src="https://pbs.twimg.com/profile_images/1112504074459480064/2ylym9Ff_400x400.jpg" alt=""/>
+                <h6 className="sidebar__title name">
+                  <Link to="/">TATSUYA UDA</Link>
+                </h6>
+              <div
+                className="sidebar__intro"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    data.datoCmsHome.introTextNode.childMarkdownRemark.html
+                }}
+              />
+
+              <p className="sidebar__social">
+                {data.allDatoCmsSocialProfile.edges.map(({ node: profile }) => (
+                  <a
+                    key={profile.profileType}
+                    href={profile.url}
+                    target="blank"
+                    className={`social social--${profile.profileType.toLowerCase()}`}
+                  >
+                    {" "}
+                  </a>
+                ))}
+              </p>
+            </div>
+
           </div>
         </div>
       )}
