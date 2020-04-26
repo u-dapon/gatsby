@@ -3,10 +3,15 @@ import { Link, graphql } from 'gatsby'
 import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
 import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <Masonry className="showcase">
+      <Helmet>
+        <title>udapon.tokyo</title>
+      </Helmet>
+
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
