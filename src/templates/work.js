@@ -13,9 +13,7 @@ export default function Work({ data }) {
       <article className="sheet">
         <HelmetDatoCms seo={data.datoCmsWork.seoMetaTags} />
         <div className="sheet__inner">
-          <h1 className="sheet__title name">
-            {data.datoCmsWork.title} | UDAPON.TOKYO
-          </h1>
+          <h1 className="sheet__title name">{data.datoCmsWork.title}</h1>
           <div className="sheet__gallery">
             <Img fluid={data.datoCmsWork.coverImage.fluid} />
           </div>
