@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <div className={`container ${showMenu ? "is-open" : ""}`}>
           <HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
@@ -51,15 +51,19 @@ const TemplateWrapper = ({ children }) => {
           />
           <div className="container__sidebar">
             <div className="sidebar">
-              <img className="main-image" src="https://pbs.twimg.com/profile_images/1112504074459480064/2ylym9Ff_400x400.jpg" alt=""/>
-                <h6 className="sidebar__title name">
-                  <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
-                </h6>
+              <img
+                className="main-image"
+                src="https://www.datocms-assets.com/26674/1596716262-evvu4yvy400x400.jpg"
+                alt=""
+              />
+              <h6 className="sidebar__title name">
+                <Link to="/">TATSUYA UDA</Link>
+              </h6>
               <div
                 className="sidebar__intro"
                 dangerouslySetInnerHTML={{
                   __html:
-                    data.datoCmsHome.introTextNode.childMarkdownRemark.html
+                    data.datoCmsHome.introTextNode.childMarkdownRemark.html,
                 }}
               />
 
@@ -71,9 +75,7 @@ const TemplateWrapper = ({ children }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`social social--${profile.profileType.toLowerCase()}`}
-                  >
-                    {" "}
-                  </a>
+                  ></a>
                 ))}
               </p>
               <div className="sidebar__copyright">
@@ -86,7 +88,7 @@ const TemplateWrapper = ({ children }) => {
               <div className="mobile-header">
                 <div className="mobile-header__menu">
                   <button
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
                       setShowMenu(!showMenu);
                     }}
@@ -100,15 +102,19 @@ const TemplateWrapper = ({ children }) => {
             {children}
 
             <div className="author_info">
-              <img className="main-image" src="https://pbs.twimg.com/profile_images/1112504074459480064/2ylym9Ff_400x400.jpg" alt=""/>
-                <h6 className="sidebar__title name">
-                  <Link to="/">TATSUYA UDA</Link>
-                </h6>
+              <img
+                className="main-image"
+                src="https://www.datocms-assets.com/26674/1596716262-evvu4yvy400x400.jpg"
+                alt=""
+              />
+              <h6 className="sidebar__title name">
+                <Link to="/">TATSUYA UDA</Link>
+              </h6>
               <div
                 className="sidebar__intro"
                 dangerouslySetInnerHTML={{
                   __html:
-                    data.datoCmsHome.introTextNode.childMarkdownRemark.html
+                    data.datoCmsHome.introTextNode.childMarkdownRemark.html,
                 }}
               />
 
@@ -120,13 +126,10 @@ const TemplateWrapper = ({ children }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`social social--${profile.profileType.toLowerCase()}`}
-                  >
-                    {" "}
-                  </a>
+                  ></a>
                 ))}
               </p>
             </div>
-
           </div>
         </div>
       )}
@@ -135,7 +138,7 @@ const TemplateWrapper = ({ children }) => {
 };
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.object,
 };
 
 export default TemplateWrapper;
